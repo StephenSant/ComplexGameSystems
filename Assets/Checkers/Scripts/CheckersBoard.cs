@@ -30,7 +30,7 @@ namespace Checkers
 
         private void Update()
         {
-
+            StartTurn();
             MouseOver();
             if (isWhiteTurn)
             {
@@ -166,6 +166,7 @@ namespace Checkers
                 if (ValidMove(start, end))
                 {
                     MovePiece(selectedPiece, x2, y2);
+                    CheckForKing();
                 }
                 else
                 {
@@ -344,8 +345,18 @@ namespace Checkers
 
         private void EndTurn()
         {
-            CheckForKing();
+
         }
+
+        private void StartTurn()
+        {
+            List<Piece> forcedPieces = GetPossibleMoves();
+            if (forcedPieces.Count != 0)
+            {
+                print("You must KILL.");
+            }
+        }
+
         private void CheckForKing()
         {
             int x = (int)endDrag.x;
@@ -356,11 +367,74 @@ namespace Checkers
                 bool blackNeedsKing = !selectedPiece.isWhite && y == 0;
                 if (whiteNeedsKing || blackNeedsKing)
                 {
-                    selectedPiece.isKing = true;
+                    selectedPiece.King();
                 }
 
             }
         }
+        public bool IsForcedMove(Piece piece)
+        {
+            if (piece.isWhite || piece.isKing)
+            {
+                for (int i = -1; i <= 1; i++)
+                {
+                    for (int j = -1; j <= 1; j++)
+                    {
+                        if (i == 0 || j == 0)
+                        {
+                            continue;
+                        }
+
+                        int x1 = piece.x + i;
+                        int y1 = piece.y + j;
+
+                        if (OutOfBounds(x1, y1))
+                        {
+                            continue;
+                        }
+
+                        Piece detectedPiece = pieces[x1, y1];
+                        if (detectedPiece != null && detectedPiece.isWhite != piece.isWhite)
+                        {
+                            int x2 = x1 + i;
+                            int y2 = y1 + j;
+                            if (OutOfBounds(x2, y2))
+                            {
+                                continue;
+                            }
+                            Piece destinationCell = pieces[x2, y2];
+                            if (destinationCell == null)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+
+                }
+                
+            }
+            return false;
+        }
+
+        public List<Piece> GetPossibleMoves()
+        {
+            List<Piece> forcedPieces = new List<Piece>();
+            for (int x = 0; x < 8; x++)
+            {
+                for (int y = 0; y < 8; y++)
+                {
+                    Piece pieceToCheck = pieces[x, y];
+                    if (pieceToCheck != null)
+                    {
+                        if (IsForcedMove(pieceToCheck))
+                        {
+                            forcedPieces.Add(pieceToCheck);
+                        }
+                    }
+
+                }
+            }
+            return forcedPieces;
+        }
     }
 }
-

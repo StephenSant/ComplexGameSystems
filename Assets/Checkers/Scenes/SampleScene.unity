@@ -462,9 +462,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c4c399270256c4aa47ec290e260fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whitePiecePrefab: {fileID: 1631613587574868, guid: 90c74130309f96249a35c494ce88371c,
+  whitePiecePrefab: {fileID: 1301781186469938, guid: 8b0ad33cfc109aa4ea8200c0e0d66efa,
     type: 2}
-  blackPiecePrefab: {fileID: 1047008234292838, guid: 005954072b74d414eaba086eceb56fe5,
+  blackPiecePrefab: {fileID: 1193866391952348, guid: b892e8b9ef8cecb43a2467392c5bfe78,
     type: 2}
   checkersParent: {fileID: 1282584160}
   boardOffset: {x: -4, y: 0, z: -4}

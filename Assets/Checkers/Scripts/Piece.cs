@@ -8,16 +8,20 @@ namespace Checkers
     {
         public bool isWhite, isKing;
         public int x, y;
+
+        public Animator anim;
+
         // Use this for initialization
         void Start()
         {
-
+            anim = GetComponent<Animator>();
         }
 
         // Update is called once per frame
-        void Update()
+        public void King()
         {
-
+            isKing = true;
+           anim.SetTrigger("King");
         }
     }
 }
