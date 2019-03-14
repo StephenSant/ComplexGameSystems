@@ -87,7 +87,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 532d462824a65df44ab54d5f7e44e188, type: 2}
+  - {fileID: 2100000, guid: 7c1ae385db80d0948a22b3e565528a54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,7 +123,7 @@ Animator:
   m_GameObject: {fileID: 1411069612356480}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7732b700d1b1cf7479621d45c7ccd7e6, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1411069612356480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ad3e29db7e82d4a8fbbc13a531065b, type: 3}
+  m_Script: {fileID: 11500000, guid: 645915fccc4a02748b1628c7fb626fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 0

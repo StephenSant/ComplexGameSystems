@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1278a3468a507ae47a086e7d616a3555, type: 3}
+  m_Script: {fileID: 11500000, guid: f05b171c130e25442b0a0186b38113ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 10
@@ -2584,14 +2584,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 554090574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb991014cd6e6e458ff7afbb8031f0f, type: 3}
+  m_Script: {fileID: 11500000, guid: ad4b11788ec1d4e4ca52944c679aba79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   redPiecePrefab: {fileID: 1411069612356480, guid: e282c669adf09b74da22fcba7fa1e554,
     type: 2}
   whitePiecePrefab: {fileID: 1577619905971040, guid: e675aa048c2885144acf2628806aa052,
     type: 2}
-  boardOffset: {x: -4, y: 0.1, z: -4}
+  boardOffset: {x: -4, y: 0, z: -4}
   pieceOffset: {x: 0.5, y: 0, z: 0.5}
 --- !u!1 &558760673
 GameObject:
