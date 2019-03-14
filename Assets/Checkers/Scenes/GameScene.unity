@@ -2593,6 +2593,7 @@ MonoBehaviour:
     type: 2}
   boardOffset: {x: -4, y: 0, z: -4}
   pieceOffset: {x: 0.5, y: 0, z: 0.5}
+  isWhiteTurn: 1
 --- !u!1 &558760673
 GameObject:
   m_ObjectHideFlags: 0
